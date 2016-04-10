@@ -60,4 +60,6 @@ RUN wget https://github.com/dvarrazzo/py-setproctitle/archive/version-1.1.9.zip 
 
 # You need to forward port 8080 with "-p 8080" on the command-line:
 # docker run -p 8080 crossbar
+WORKDIR /home
+EXPOSE 8080
 ENTRYPOINT ["crossbar", "start", "--cbdir", ".crossbar"]
